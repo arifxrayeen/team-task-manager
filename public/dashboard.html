@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Team Task Manager</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="top-nav">
+      <div class="nav-inner">
+        <strong id="welcome-text">Dashboard</strong>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Dashboard</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Total Tasks</h3>
+            <p id="total-tasks">0</p>
+          </div>
+          <div class="card">
+            <h3>To Do</h3>
+            <p id="todo-count">0</p>
+          </div>
+          <div class="card">
+            <h3>In Progress</h3>
+            <p id="progress-count">0</p>
+          </div>
+          <div class="card">
+            <h3>Done</h3>
+            <p id="done-count">0</p>
+          </div>
+          <div class="card">
+            <h3>Overdue</h3>
+            <p id="overdue-count">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Create Project</h2>
+        <form id="project-form">
+          <label>Project Name</label>
+          <input id="project-name" required />
+          <label>Description</label>
+          <textarea id="project-description"></textarea>
+          <button type="submit">Create Project</button>
+        </form>
+        <p id="project-msg" class="muted"></p>
+      </div>
+
+      <div class="card">
+        <h2>Your Projects</h2>
+        <div id="projects-list"></div>
+      </div>
+
+      <div class="card">
+        <h2>Tasks Per User</h2>
+        <div id="tasks-per-user"></div>
+      </div>
+    </div>
+
+    <script src="/dashboard.js"></script>
+  </body>
+</html>

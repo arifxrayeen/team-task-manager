@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project - Team Task Manager</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="top-nav">
+      <div class="nav-inner">
+        <strong>Project Detail</strong>
+        <div class="row" style="max-width: 280px">
+          <button onclick="goBack()">Back</button>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Members</h2>
+        <div id="members-list"></div>
+      </div>
+
+      <div class="card" id="add-member-card" style="display: none">
+        <h2>Add Member (Admin)</h2>
+        <form id="add-member-form">
+          <label>User Email</label>
+          <input id="member-email" type="email" required />
+          <label>Role</label>
+          <select id="member-role">
+            <option value="member">Member</option>
+            <option value="admin">Admin</option>
+          </select>
+          <button type="submit">Add Member</button>
+        </form>
+        <p id="member-msg" class="muted"></p>
+      </div>
+
+      <div class="card" id="create-task-card" style="display: none">
+        <h2>Create Task (Admin)</h2>
+        <form id="task-form">
+          <label>Title</label>
+          <input id="task-title" required />
+          <label>Description</label>
+          <textarea id="task-description"></textarea>
+          <div class="row">
+            <div>
+              <label>Due Date</label>
+              <input id="task-due-date" type="date" />
+            </div>
+            <div>
+              <label>Priority</label>
+              <select id="task-priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+          </div>
+          <label>Assign To</label>
+          <select id="task-assignee"></select>
+          <button type="submit">Create Task</button>
+        </form>
+        <p id="task-msg" class="muted"></p>
+      </div>
+
+      <div class="card">
+        <h2>Tasks</h2>
+        <div id="tasks-list"></div>
+      </div>
+    </div>
+
+    <script src="/project.js"></script>
+  </body>
+</html>

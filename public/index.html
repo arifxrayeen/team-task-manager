@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team Task Manager - Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Team Task Manager</h1>
+      <div class="card" id="auth-card">
+        <h2 id="form-title">Login</h2>
+        <form id="auth-form">
+          <div id="name-wrap" style="display: none">
+            <label>Name</label>
+            <input id="name" type="text" />
+          </div>
+          <label>Email</label>
+          <input id="email" type="email" required />
+          <label>Password</label>
+          <input id="password" type="password" required />
+          <button type="submit" id="submit-btn">Login</button>
+        </form>
+        <p class="muted">
+          <span id="toggle-label">New user?</span>
+          <span id="toggle-mode" class="link">Create account</span>
+        </p>
+        <p id="message" class="muted"></p>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
