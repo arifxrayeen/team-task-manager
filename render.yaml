@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: team-task-manager
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: JWT_SECRET
+        value: your_jwt_secret_change_this_in_production_12345
+      - key: DB_PATH
+        value: ./data.sqlite
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
